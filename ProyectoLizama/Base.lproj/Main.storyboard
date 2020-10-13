@@ -146,12 +146,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa tu correo electrónico" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NL0-Po-SVX">
                                 <rect key="frame" x="20" y="173" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="6SG-hr-YcA"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="Ugu-qS-G0p"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="aDE-lX-g5u"/>
                                     <constraint firstAttribute="height" constant="50" id="gNN-mV-NdW"/>
                                     <constraint firstAttribute="width" constant="374" id="iX2-8P-0oA"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="k7g-pt-XN7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
@@ -224,27 +220,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ss-gf-bLP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ss-gf-bLP">
                                 <rect key="frame" x="20" y="173" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="4dw-cZ-xdN"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="5Or-2A-6m3"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="AXX-A7-aOx"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="MRm-kf-Pjy"/>
                                     <constraint firstAttribute="height" constant="50" id="Qwo-hk-mcd"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="bh2-Lw-3uz"/>
-                                    <constraint firstAttribute="width" constant="374" id="nKg-5H-gqs"/>
                                 </constraints>
-                                <string key="text">Enviamos el código a:henry.lizama@yahoo.es</string>
+                                <string key="text">Enviamos el código a:
+henry.lizama@yahoo.es</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingresa el código de 6 dígitos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uyV-01-rKK">
                                 <rect key="frame" x="20" y="272" width="224" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="224" id="kmc-wa-1wB"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -255,7 +243,6 @@
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="A06-pY-AdO"/>
                                     <constraint firstAttribute="height" constant="45" id="IOr-s8-zWf"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="LoY-3C-i1e"/>
-                                    <constraint firstAttribute="width" constant="374" id="snf-OB-o3g"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -264,15 +251,7 @@
                                 <rect key="frame" x="20" y="434" width="374" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="2xn-MY-sR0"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="AvR-8j-fan"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="Bt4-Sz-o0f"/>
                                     <constraint firstAttribute="height" constant="45" id="GFE-WJ-Oog"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="K2H-Nu-ylq"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="PlE-l2-Bhg"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="Q89-lW-7zn"/>
-                                    <constraint firstAttribute="width" constant="150" id="cni-8U-Fqn"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="e8F-vX-5qo"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Siguiente"/>
@@ -311,52 +290,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Crea una contraseña nueva de seis caracteres como mínimo." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOq-83-85x">
-                                <rect key="frame" x="20" y="231" width="351" height="104"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="311" id="3iZ-BO-BsB"/>
-                                    <constraint firstAttribute="width" constant="224" id="N52-Ai-yVB"/>
-                                    <constraint firstAttribute="height" constant="63" id="SKk-Wa-3Q0"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crea una contraseña nueva de seis caracteres como mínimo." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOq-83-85x">
+                                <rect key="frame" x="20" y="272" width="374" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atP-3F-BCf">
-                                <rect key="frame" x="20" y="370" width="374" height="45"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="atP-3F-BCf">
+                                <rect key="frame" x="20" y="348" width="374" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="ZlJ-yT-WbZ"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="as6-nV-2h8"/>
                                     <constraint firstAttribute="height" constant="45" id="bS3-8R-HN5"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paw-6g-Kef">
-                                <rect key="frame" x="20" y="476" width="374" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="paw-6g-Kef">
+                                <rect key="frame" x="20" y="454" width="374" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="4Ne-bu-sXi"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="A7V-QM-G10"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="DrZ-QP-S35"/>
-                                    <constraint firstAttribute="width" constant="150" id="Rpi-Wr-EcH"/>
                                     <constraint firstAttribute="height" constant="45" id="WWQ-ow-1d1"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="ls5-b6-osU"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="we1-ne-aTB"/>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Siguiente"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Crear una contraseña nueva" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv5-xZ-Zzm">
-                                <rect key="frame" x="20" y="171" width="374" height="50"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crear una contraseña nueva" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv5-xZ-Zzm">
+                                <rect key="frame" x="20" y="173" width="374" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="4ny-ai-fOa"/>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="9I9-6J-tUd"/>
-                                    <constraint firstAttribute="width" constant="374" id="F4o-0T-xih"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="QI4-jo-lcG"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="QMA-yR-qWL"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="374" id="XKG-Oo-1UE"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="fOd-f9-yYv"/>
                                     <constraint firstAttribute="height" constant="50" id="uAe-jj-9gJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
@@ -369,14 +328,17 @@
                         <constraints>
                             <constraint firstItem="Gvj-qh-SD8" firstAttribute="trailing" secondItem="Gv5-xZ-Zzm" secondAttribute="trailing" constant="20" id="1Ty-R6-pFz"/>
                             <constraint firstItem="Gvj-qh-SD8" firstAttribute="trailing" secondItem="atP-3F-BCf" secondAttribute="trailing" constant="20" id="FZc-fC-7ki"/>
+                            <constraint firstItem="Gvj-qh-SD8" firstAttribute="trailing" secondItem="paw-6g-Kef" secondAttribute="trailing" constant="20" id="KbF-R8-FsE"/>
+                            <constraint firstItem="paw-6g-Kef" firstAttribute="top" secondItem="atP-3F-BCf" secondAttribute="bottom" constant="61" id="SH2-kx-4kn"/>
                             <constraint firstItem="Gvj-qh-SD8" firstAttribute="trailing" secondItem="pOq-83-85x" secondAttribute="trailing" constant="20" id="a6S-8H-DYG"/>
+                            <constraint firstItem="paw-6g-Kef" firstAttribute="leading" secondItem="Gvj-qh-SD8" secondAttribute="leading" constant="20" id="bU7-yY-WMt"/>
                             <constraint firstItem="pOq-83-85x" firstAttribute="top" secondItem="Gv5-xZ-Zzm" secondAttribute="bottom" constant="49" id="brs-yC-ts9"/>
+                            <constraint firstItem="Gv5-xZ-Zzm" firstAttribute="top" secondItem="Gvj-qh-SD8" secondAttribute="top" constant="85" id="cIh-HA-iir"/>
                             <constraint firstItem="pOq-83-85x" firstAttribute="leading" secondItem="Gvj-qh-SD8" secondAttribute="leading" constant="20" id="dtx-1d-R6B"/>
                             <constraint firstItem="atP-3F-BCf" firstAttribute="leading" secondItem="Gvj-qh-SD8" secondAttribute="leading" constant="20" id="frc-Wn-ffz"/>
-                            <constraint firstItem="paw-6g-Kef" firstAttribute="top" secondItem="atP-3F-BCf" secondAttribute="bottom" constant="61" id="hHR-nM-Cp7"/>
-                            <constraint firstItem="atP-3F-BCf" firstAttribute="top" secondItem="pOq-83-85x" secondAttribute="bottom" constant="35" id="hOu-t3-nUt"/>
                             <constraint firstItem="Gv5-xZ-Zzm" firstAttribute="leading" secondItem="Dr6-y4-riq" secondAttribute="leading" constant="20" id="m7i-Hf-iwh"/>
                             <constraint firstItem="Gv5-xZ-Zzm" firstAttribute="top" secondItem="Gvj-qh-SD8" secondAttribute="top" constant="85" id="s5o-8t-6sK"/>
+                            <constraint firstItem="atP-3F-BCf" firstAttribute="top" secondItem="pOq-83-85x" secondAttribute="bottom" constant="35" id="u3a-Hb-IVE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qRr-z5-YjB"/>
@@ -388,7 +350,6 @@
         <!--View Controller-->
         <scene sceneID="kXL-sY-t1B">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Mq6-ad-8OD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="1PH-gR-46r" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I2x-Hd-he2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -457,6 +418,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="SUr-Aw-3SA"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mq6-ad-8OD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1757.9710144927537" y="116.51785714285714"/>
         </scene>
@@ -571,7 +533,8 @@
                                     <constraint firstAttribute="height" constant="50" id="k8a-2x-pex"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="50" id="scu-s2-Aqd"/>
                                 </constraints>
-                                <string key="text">¿Cuál quieres que sea tu contraseña?</string>
+                                <string key="text">¿Cuál quieres que sea tu
+ contraseña?</string>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
