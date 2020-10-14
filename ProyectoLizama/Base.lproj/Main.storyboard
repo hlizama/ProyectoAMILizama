@@ -44,6 +44,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="s4x-OK-FzI"/>
+                                        </connections>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="trS-4m-5SA">
                                         <rect key="frame" x="20" y="302" width="372" height="45"/>
@@ -53,6 +56,9 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="e5W-PK-03c"/>
+                                        </connections>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ikb-Ip-0Tz">
                                         <rect key="frame" x="20" y="405" width="372" height="45"/>
@@ -86,6 +92,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="6Z1-q7-Tv0" firstAttribute="leading" secondItem="2Ky-gA-f5u" secondAttribute="leading" constant="40" id="0Jg-2A-6hx"/>
                                     <constraint firstAttribute="bottom" secondItem="cla-tO-NM0" secondAttribute="bottom" constant="364" id="Ef6-rZ-1tF"/>
@@ -114,6 +121,9 @@
                                     <constraint firstItem="cla-tO-NM0" firstAttribute="top" secondItem="6Z1-q7-Tv0" secondAttribute="bottom" constant="71" id="w1E-Vu-1RB"/>
                                     <constraint firstItem="Ikb-Ip-0Tz" firstAttribute="leading" secondItem="2Ky-gA-f5u" secondAttribute="leading" constant="20" id="ytT-mr-i74"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="44D-Iq-PVk" appends="YES" id="JLB-UF-cp8"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -129,9 +139,15 @@
                     <size key="freeformSize" width="414" height="1000"/>
                     <connections>
                         <outlet property="constraintBottomScroll" destination="Bxn-TM-k7q" id="M7T-bq-vE2"/>
+                        <outlet property="txtContrasena" destination="trS-4m-5SA" id="ZNi-zj-iji"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="44D-Iq-PVk">
+                    <connections>
+                        <action selector="tapToClodeKeyboard:" destination="BYZ-38-t0r" id="WaX-eG-CYI"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="77.678571428571431"/>
         </scene>

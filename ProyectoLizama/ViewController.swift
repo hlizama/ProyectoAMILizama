@@ -9,8 +9,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var txtcelCorreo: UITextField!
+    
+    @IBOutlet weak var txtContrasena: UITextField!
     
     @IBOutlet weak var constraintBottomScroll: NSLayoutConstraint!
+    
+    @IBAction func tapToClodeKeyboard(_ sender: Any) {
+            self.view.endEditing(true)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
