@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="edI-fu-6q8">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -30,7 +30,6 @@
                                         <rect key="frame" x="145" y="100" width="122" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="Rh0-et-f96"/>
-                                            <constraint firstAttribute="width" constant="122" id="gpV-G8-AQv"/>
                                             <constraint firstAttribute="height" constant="34" id="ulj-8T-91A"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
@@ -150,6 +149,30 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="77.678571428571431"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Tlv-CX-cNc">
+            <objects>
+                <viewController id="dy5-0t-A8S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dnu-dk-xku">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmh-Pm-0MV">
+                                <rect key="frame" x="160" y="150" width="46" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="g98-qb-G6q"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9Q-Ra-d2l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="112" y="807"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SbL-N1-C6y">
@@ -402,7 +425,7 @@ henry.lizama@yahoo.es</string>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Enviar"/>
                                 <connections>
-                                    <segue destination="TPt-SG-1mv" kind="show" id="qUw-Ac-ikN"/>
+                                    <segue destination="gTf-0C-r8B" kind="show" identifier="SegueMailSend" id="LJz-aq-ECT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VVp-yZ-hdJ">
@@ -449,6 +472,7 @@ henry.lizama@yahoo.es</string>
                     </view>
                     <navigationItem key="navigationItem" id="SUr-Aw-3SA"/>
                     <connections>
+                        <outlet property="btnEnviarCorreo" destination="7ru-KM-v4U" id="R90-Rc-ZEI"/>
                         <outlet property="lblRegisterM" destination="rOd-2g-nUj" id="KMd-lG-hRj"/>
                         <outlet property="txtCorreoRegister" destination="uy3-zX-Bj1" id="aQg-Og-AmY"/>
                     </connections>
@@ -467,7 +491,7 @@ henry.lizama@yahoo.es</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cual es tu carrera y sede?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8N-UC-hAE">
-                                <rect key="frame" x="20" y="173" width="374" height="50"/>
+                                <rect key="frame" x="20" y="129" width="374" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="FvL-FB-DuU"/>
                                     <constraint firstAttribute="height" constant="50" id="Mg4-aV-6Sz"/>
@@ -478,19 +502,19 @@ henry.lizama@yahoo.es</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Carrera" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MsC-r3-In6">
-                                <rect key="frame" x="20" y="272" width="57" height="21"/>
+                                <rect key="frame" x="20" y="228" width="57" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sede" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28l-OI-UOc">
-                                <rect key="frame" x="20" y="390" width="374" height="21"/>
+                                <rect key="frame" x="20" y="346" width="374" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EeH-Ah-mGs">
-                                <rect key="frame" x="20" y="319" width="374" height="45"/>
+                                <rect key="frame" x="20" y="275" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Nhk-53-pg9"/>
                                     <constraint firstAttribute="height" constant="45" id="pb2-Vt-iOp"/>
@@ -499,7 +523,7 @@ henry.lizama@yahoo.es</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="brw-pQ-EyH">
-                                <rect key="frame" x="20" y="437" width="374" height="45"/>
+                                <rect key="frame" x="20" y="393" width="374" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="HpO-fk-gFu"/>
                                     <constraint firstAttribute="height" constant="45" id="lvQ-Gn-dDz"/>
@@ -508,7 +532,7 @@ henry.lizama@yahoo.es</string>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tJ9-Pf-pD3">
-                                <rect key="frame" x="132" y="539" width="150" height="45"/>
+                                <rect key="frame" x="132" y="495" width="150" height="45"/>
                                 <color key="backgroundColor" systemColor="systemBlueColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="A7P-A6-QBL"/>
@@ -519,9 +543,6 @@ henry.lizama@yahoo.es</string>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Continuar"/>
-                                <connections>
-                                    <segue destination="gTf-0C-r8B" kind="show" id="iCW-Zv-vLl"/>
-                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BIw-ii-qQQ"/>
@@ -550,12 +571,12 @@ henry.lizama@yahoo.es</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1sj-rG-BIQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2488" y="129"/>
+            <point key="canvasLocation" x="2516" y="-902"/>
         </scene>
-        <!--View Controller-->
+        <!--Register3 View Controller-->
         <scene sceneID="d7a-Jl-qfM">
             <objects>
-                <viewController id="gTf-0C-r8B" sceneMemberID="viewController">
+                <viewController id="gTf-0C-r8B" customClass="Register3ViewController" customModule="ProyectoLizama" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xLt-xZ-CGj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -604,13 +625,29 @@ henry.lizama@yahoo.es</string>
                                 </constraints>
                                 <color key="tintColor" systemColor="systemBackgroundColor"/>
                                 <state key="normal" title="Registrarte"/>
+                                <connections>
+                                    <action selector="EnviarUsuarioFirebase:" destination="gTf-0C-r8B" eventType="touchUpInside" id="Awh-g0-H0y"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ofu-0N-4gS">
+                                <rect key="frame" x="50" y="514" width="314" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="EZQ-mE-Zap"/>
+                                    <constraint firstAttribute="height" constant="94" id="ynC-5i-qhu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ybo-3G-n3N"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RRi-By-bfC" firstAttribute="leading" secondItem="ybo-3G-n3N" secondAttribute="leading" constant="20" id="2Bx-vd-3AV"/>
                             <constraint firstItem="pCo-lw-WHA" firstAttribute="top" secondItem="P24-N5-uUg" secondAttribute="bottom" constant="26" id="2HO-YZ-kOI"/>
+                            <constraint firstItem="ofu-0N-4gS" firstAttribute="top" secondItem="hOE-Vi-vkg" secondAttribute="bottom" constant="48" id="2YX-Ro-Qe3"/>
+                            <constraint firstItem="ybo-3G-n3N" firstAttribute="bottom" secondItem="ofu-0N-4gS" secondAttribute="bottom" constant="254" id="8jH-3V-CVZ"/>
+                            <constraint firstItem="ofu-0N-4gS" firstAttribute="leading" secondItem="ybo-3G-n3N" secondAttribute="leading" constant="50" id="KbE-nj-j7M"/>
                             <constraint firstItem="RRi-By-bfC" firstAttribute="top" secondItem="ybo-3G-n3N" secondAttribute="top" constant="85" id="MB7-JA-aUa"/>
                             <constraint firstItem="ybo-3G-n3N" firstAttribute="trailing" secondItem="hOE-Vi-vkg" secondAttribute="trailing" constant="132" id="N0z-fH-xjz"/>
                             <constraint firstItem="pCo-lw-WHA" firstAttribute="leading" secondItem="ybo-3G-n3N" secondAttribute="leading" constant="20" id="NXo-nv-nGv"/>
@@ -618,15 +655,20 @@ henry.lizama@yahoo.es</string>
                             <constraint firstItem="hOE-Vi-vkg" firstAttribute="leading" secondItem="ybo-3G-n3N" secondAttribute="leading" constant="132" id="WNx-h7-tLS"/>
                             <constraint firstItem="P24-N5-uUg" firstAttribute="leading" secondItem="ybo-3G-n3N" secondAttribute="leading" constant="20" id="bfJ-A3-2mD"/>
                             <constraint firstItem="P24-N5-uUg" firstAttribute="top" secondItem="RRi-By-bfC" secondAttribute="bottom" constant="49" id="cUH-3J-Ir3"/>
+                            <constraint firstItem="ybo-3G-n3N" firstAttribute="trailing" secondItem="ofu-0N-4gS" secondAttribute="trailing" constant="50" id="pkQ-5Y-PHd"/>
                             <constraint firstItem="hOE-Vi-vkg" firstAttribute="top" secondItem="pCo-lw-WHA" secondAttribute="bottom" constant="57" id="vok-Xv-ZEO"/>
                             <constraint firstItem="ybo-3G-n3N" firstAttribute="trailing" secondItem="pCo-lw-WHA" secondAttribute="trailing" constant="20" id="wcI-v5-mEX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="F9T-Lb-KO1"/>
+                    <connections>
+                        <outlet property="lblMessageRegister" destination="ofu-0N-4gS" id="L2q-51-hAR"/>
+                        <outlet property="txtPassUser" destination="pCo-lw-WHA" id="qtY-it-bzw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ie-Jx-ENy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3391" y="117"/>
+            <point key="canvasLocation" x="3089.8550724637685" y="103.79464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="RZI-VQ-Fz0">

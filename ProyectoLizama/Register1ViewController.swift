@@ -7,6 +7,8 @@
 
 import UIKit
 
+import Firebase
+
 class Register1ViewController: UIViewController {
 
     
@@ -14,16 +16,26 @@ class Register1ViewController: UIViewController {
     
     @IBOutlet weak var lblRegisterM: UILabel!
     
+    @IBOutlet weak var btnEnviarCorreo: UIButton!
+    	
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTextField()
+        btnEnviarCorreo.isEnabled = false
         // Do any additional setup after loading the view.
     }
     
     private func setupTextField(){
         txtCorreoRegister.bind { [weak self] (text) in
             if let isValid = self?.isValidEmail(email: text){
-                self?.lblRegisterM.text = isValid ? "Correo valido" : "Correo invalido"           }
+                self?.lblRegisterM.text = isValid ? "Correo valido" : "Correo invalido"
+                if (isValid) {
+                    self?.btnEnviarCorreo.isEnabled = true
+                } else {
+                    self?.btnEnviarCorreo.isEnabled = false
+                }
+            }
         }
     }
     
@@ -34,27 +46,32 @@ class Register1ViewController: UIViewController {
         return emailPred.evaluate(with: email)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "SegueMailSend") {
+            let segundaVista = segue.destination as! Register3ViewController
+            segundaVista.correo = txtCorreoRegister.text!
+        }
+    }
+    
 }
 
 class BindingTextField: UITextField {
 
- var textEdited: ((String) -> Void)? = nil
- 
- func bind  (completion: @escaping (String) -> Void) {
- 
-    textEdited = completion
-    addTarget( self, action:
-        #selector(textFieldEditingChanged(_:)), for:
-        .editingChanged)
- 
- }
- 
+     var textEdited: ((String) -> Void)? = nil
+     
+     func bind  (completion: @escaping (String) -> Void) {
+     
+        textEdited = completion
+        addTarget( self, action:
+            #selector(textFieldEditingChanged(_:)), for:
+            .editingChanged)
+     
+     }
+     
     @objc func textFieldEditingChanged (_ textField:UITextField){
         guard let text  = textField.text else {return}
         textEdited?(text)
         
     }
-    
-   
 
 }
