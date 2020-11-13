@@ -59,7 +59,6 @@
                                         </state>
                                         <connections>
                                             <action selector="loginUsuario:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kWE-hV-oD9"/>
-                                            <segue destination="dy5-0t-A8S" kind="show" identifier="SegueLoginSend" id="lwV-ey-iFy"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Z1-q7-Tv0">
@@ -164,10 +163,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="77.678571428571431"/>
         </scene>
-        <!--Home View Controller-->
+        <!--View Controller-->
         <scene sceneID="Tlv-CX-cNc">
             <objects>
-                <viewController id="dy5-0t-A8S" customClass="HomeViewController" customModule="ProyectoLizama" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="dy5-0t-A8S" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dnu-dk-xku">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

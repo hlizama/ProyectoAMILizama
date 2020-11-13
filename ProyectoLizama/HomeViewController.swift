@@ -9,6 +9,10 @@ import UIKit
 
 import Firebase
 
+enum ProviderType : String{
+    case basic
+}
+
 class HomeViewController: UIViewController {
     
     
@@ -16,23 +20,44 @@ class HomeViewController: UIViewController {
     
     var handle: AuthStateDidChangeListenerHandle?
     
+    private let email : String
+    private let provider : ProviderType
+    
+    init(email:String, provider:ProviderType) {
+        self.email = email
+        self.provider = provider
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init coder has not been implement")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        valida()
+        //valida()
     }
     
     private func valida(){
-        print(uid)
+       /* let firebaseAuth = Auth.auth()
+       do {
+         try firebaseAuth.signOut()
+       } catch let signOutError as NSError {
+         print ("Error signing out: %@", signOutError)
+       }
+        if(uid == nil) {
+            self.navigationController?.popViewController(animated: true)
+        } */
     }
     
     
     
-    /* override func viewWillAppear(_ animated: Bool) {
+     /* override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // [START auth_listener]
        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             
-            if(user?.displayName == nil){
+            if(user?.uid == nil){
                 self.navigationController?.popViewController(animated: true)
             }
         
@@ -50,6 +75,6 @@ class HomeViewController: UIViewController {
        // [START remove_auth_listener]
        Auth.auth().removeStateDidChangeListener(handle!)
        // [END remove_auth_listener]
-     } */
+     }  */
     
 }

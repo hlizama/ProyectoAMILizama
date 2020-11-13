@@ -18,6 +18,7 @@
 		A520D28F255F6DD1002537E4 /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */; };
 		A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */; };
 		A5667320255C6F8A00CB9529 /* Register3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566731F255C6F8A00CB9529 /* Register3ViewController.swift */; };
+		A5A1602A2560635B00CF9E55 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A160292560635B00CF9E55 /* HomeViewController.xib */; };
 		F9AD91C5B3E45921547BE202 /* Pods_ProyectoLizama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B300C5121B540CC3DFE27CC /* Pods_ProyectoLizama.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +38,7 @@
 		A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 		A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A566731F255C6F8A00CB9529 /* Register3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register3ViewController.swift; sourceTree = "<group>"; };
+		A5A160292560635B00CF9E55 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		F97C3ED95F9B75AFA70D24CA /* Pods-ProyectoLizama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoLizama.release.xcconfig"; path = "Target Support Files/Pods-ProyectoLizama/Pods-ProyectoLizama.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +95,7 @@
 				A566731F255C6F8A00CB9529 /* Register3ViewController.swift */,
 				A520D288255F6BEB002537E4 /* HomeViewController.swift */,
 				A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */,
+				A5A160292560635B00CF9E55 /* HomeViewController.xib */,
 			);
 			path = ProyectoLizama;
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 			files = (
 				2F0861802534BC88009160B1 /* LaunchScreen.storyboard in Resources */,
 				A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */,
+				A5A1602A2560635B00CF9E55 /* HomeViewController.xib in Resources */,
 				2F08617D2534BC88009160B1 /* Assets.xcassets in Resources */,
 				2F08617B2534BC85009160B1 /* Main.storyboard in Resources */,
 			);

@@ -28,8 +28,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var lblMensaje: UILabel!
     
-    var email = ""
-    var password = ""
+    //var email = ""
+    //var password = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,21 +37,37 @@ class ViewController: UIViewController {
     }
     
     @IBAction func loginUsuario(_ sender: Any) {
-        login()
+        //login()
+        if let email = txtCorreo.text, let password = txtContrasena.text {
+            Auth.auth().signIn(withEmail: email, password: password) {
+                
+                (result, error) in
+                
+                if let result = result, error == nil {
+                    self.navigationController?.pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
+                } else {
+                    self.lblMensaje.text = error?.localizedDescription
+                }
+                
+            }
+        } else {
+            self.lblMensaje.text = "Ingrese usuario y contraseña"
+        }
+        
     }
     
-    var handle: AuthStateDidChangeListenerHandle?
+    //var handle: AuthStateDidChangeListenerHandle?
     
-    var uid2 : String?
+    //var uid2 : String?
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    /* override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "SegueLoginSend") {
             let segundaVista = segue.destination as! HomeViewController
             segundaVista.uid = self.uid2
         }
-    }
+    } */
     
-     override func viewWillAppear(_ animated: Bool) {
+     /* override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // [START auth_listener]
        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
@@ -60,63 +76,21 @@ class ViewController: UIViewController {
                
                 self.uid2 = user?.uid
                 
+                //print(user?.uid)
                 
             }
        }
         
-    }
+    } */
     
-     override func viewWillDisappear(_ animated: Bool) {
+     /* override func viewWillDisappear(_ animated: Bool) {
        super.viewWillDisappear(animated)
        // [START remove_auth_listener]
        Auth.auth().removeStateDidChangeListener(handle!)
        // [END remove_auth_listener]
-     }
+     } */
     
-    private func login() {
-        
-        print(txtCorreo.text!)
-        print(txtContrasena.text!)
-        
-        if (txtCorreo.text != "" && txtContrasena.text != "") {
-         
-          email = txtCorreo.text!
-          password = txtContrasena.text!
-            
-           Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-           
-           if let error = error {
-             let authError = error as NSError
-             if (authError.code == AuthErrorCode.secondFactorRequired.rawValue) {
-             
-             
-             } else {
-                self?.lblMensaje.text = error.localizedDescription
-                      return
-             }
-         
-           }
-           
-           // redirige home
-            
-            print("EXITO")
-            
-            //self.navigationController?.popViewController(animated: true)
-            
-           
-         }
-         
-
-        } else {
-         
-            lblMensaje.text = "Ingrese correo y contraseña"
-            
-            return
-         
-        }
-     
-     }
-
+    
 
 }
 
