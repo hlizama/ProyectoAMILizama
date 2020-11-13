@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "8FEE9D2E-05D0-4D1E-805E-904F07D2C75D"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EAE8C567-4B9C-4982-9451-00B228E16BC8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ProyectoLizama/PopUpViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  uuid = "EAE8C567-4B9C-4982-9451-00B228E16BC8 - 3dcf4c3d58afb65c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoLizama.PopUpViewController.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProyectoLizama.PopUpViewController&gt;"
+                  moduleName = "ProyectoLizama"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user178641/Documents/proy/ProyectoAMILizama/ProyectoLizama/PopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "12">
+               </Location>
+               <Location
+                  uuid = "EAE8C567-4B9C-4982-9451-00B228E16BC8 - 1181629f87608d4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ProyectoLizama.PopUpViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;ProyectoLizama.PopUpViewController&gt;"
+                  moduleName = "ProyectoLizama"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/user178641/Documents/proy/ProyectoAMILizama/ProyectoLizama/PopUpViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "102">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

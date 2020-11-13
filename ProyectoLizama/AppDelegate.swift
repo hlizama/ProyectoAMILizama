@@ -12,10 +12,24 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
+    var window : UIWindow?
+    
+    //var initialViewController :UIViewController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
+    
+        
+       /*  let initialViewController = HomeViewController(email: "fsdafasdf", provider: .basic)
+        let navigationController = UINavigationController(rootViewController: initialViewController)
+        
+        let rect = UIScreen.main.bounds
+        window = UIWindow(frame: rect)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible() */
+
+        
         return true
     }
 

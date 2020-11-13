@@ -314,6 +314,7 @@ PODS:
   - FirebaseUI/Storage (9.0.0):
     - Firebase/Storage
     - SDWebImage (~> 5.6)
+  - FontAwesome.swift (1.9.1)
   - GoogleDataTransport (8.0.1):
     - nanopb (~> 2.30906.0)
   - GoogleSignIn (5.0.2):
@@ -382,6 +383,7 @@ PODS:
 
 DEPENDENCIES:
   - FirebaseUI
+  - FontAwesome.swift
 
 SPEC REPOS:
   trunk:
@@ -398,6 +400,7 @@ SPEC REPOS:
     - FirebaseFirestore
     - FirebaseStorage
     - FirebaseUI
+    - FontAwesome.swift
     - GoogleDataTransport
     - GoogleSignIn
     - GoogleUtilities
@@ -424,6 +427,7 @@ SPEC CHECKSUMS:
   FirebaseFirestore: bbf303f0638a93e6ecb38433aad283cebdfece5f
   FirebaseStorage: 80e2cd5200791540ca544f4dcac5e6b56994fc97
   FirebaseUI: f0677a1cc235f6da602cbd5c9b5fbbd24544a6b3
+  FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
   GoogleDataTransport: e4085e6762f36a6141738f46b0153473ce57fb18
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: f734da554aade8cc7928a31c2f3311897933a1bd
@@ -436,6 +440,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   SDWebImage: b69257f4ab14e9b6a2ef53e910fdf914d8f757c1
 
-PODFILE CHECKSUM: 34fd1ab84d692d5165e3c2490283603abe4b9d4f
+PODFILE CHECKSUM: 30edda2d2d231d3b1c42f5533f45f93247f9e1d0
 
 COCOAPODS: 1.10.0

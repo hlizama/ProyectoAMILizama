@@ -9,6 +9,9 @@ import UIKit
 
 import Firebase
 
+import FontAwesome_swift
+
+
 enum ProviderType : String{
     case basic
 }
@@ -16,12 +19,14 @@ enum ProviderType : String{
 class HomeViewController: UIViewController {
     
     
+    @IBOutlet weak var btnHome: UIButton!
+    
     var uid : String?
-    
     var handle: AuthStateDidChangeListenerHandle?
-    
     private let email : String
     private let provider : ProviderType
+    
+    
     
     init(email:String, provider:ProviderType) {
         self.email = email
@@ -33,21 +38,25 @@ class HomeViewController: UIViewController {
         fatalError("init coder has not been implement")
     }
     
+    @IBAction func btnSalir(_ sender: Any) {
+        let firebaseAuth = Auth.auth()
+        do {
+          try firebaseAuth.signOut()
+        } catch let signOutError as NSError {
+          print ("Error signing out: %@", signOutError)
+        }
+         if(uid == nil) {
+            self.dismiss(animated: true, completion: {})
+             self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //valida()
     }
     
     private func valida(){
-       /* let firebaseAuth = Auth.auth()
-       do {
-         try firebaseAuth.signOut()
-       } catch let signOutError as NSError {
-         print ("Error signing out: %@", signOutError)
-       }
-        if(uid == nil) {
-            self.navigationController?.popViewController(animated: true)
-        } */
+       
     }
     
     

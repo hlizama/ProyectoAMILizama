@@ -21,19 +21,31 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var constraintBottomScroll: NSLayoutConstraint!
     
-    @IBAction func tapToClodeKeyboard(_ sender: Any) {
-            self.view.endEditing(true)
-    }
-    
-    
     @IBOutlet weak var lblMensaje: UILabel!
     
     //var email = ""
     //var password = ""
     
+    //let detailVC = PopUpViewController(mensaje: <#T##String#>, provider: <#T##ProviderTypePopUp#>)
+    //let navigationController = UINavigationController(pushViewController: detailVC)
+    
+    var handle: AuthStateDidChangeListenerHandle?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+         
+         if let user =  user {
+                 self.navigationController?.pushViewController(HomeViewController(email: user.email!, provider: .basic), animated: true)
+                 //print(user?.email)
+                 
+             }
+        }
+    }
+    
+    @IBAction func tapToClodeKeyboard(_ sender: Any) {
+            self.view.endEditing(true)
     }
     
     @IBAction func loginUsuario(_ sender: Any) {
@@ -46,12 +58,15 @@ class ViewController: UIViewController {
                 if let result = result, error == nil {
                     self.navigationController?.pushViewController(HomeViewController(email: result.user.email!, provider: .basic), animated: true)
                 } else {
-                    self.lblMensaje.text = error?.localizedDescription
+                    
+                    let detailVC = PopUpViewController(mensaje: error!.localizedDescription, provider: .basic)
+                    let navigationController = UINavigationController(rootViewController: detailVC)
+                    navigationController.modalPresentationStyle = .custom
+                    //navigationController.modalTransitionStyle = .crossDissolve
+                    self.present(navigationController, animated: true)
                 }
                 
             }
-        } else {
-            self.lblMensaje.text = "Ingrese usuario y contraseña"
         }
         
     }
@@ -67,21 +82,12 @@ class ViewController: UIViewController {
         }
     } */
     
-     /* override func viewWillAppear(_ animated: Bool) {
+   override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         // [START auth_listener]
-       handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+       
         
-            if(user?.uid != nil){
-               
-                self.uid2 = user?.uid
-                
-                //print(user?.uid)
-                
-            }
-       }
-        
-    } */
+    }
     
      /* override func viewWillDisappear(_ animated: Bool) {
        super.viewWillDisappear(animated)

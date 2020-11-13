@@ -7,6 +7,8 @@ target 'ProyectoLizama' do
 
   pod 'FirebaseUI'
   
+  pod 'FontAwesome.swift'
+  
 
   # Pods for ProyectoLizama
 
