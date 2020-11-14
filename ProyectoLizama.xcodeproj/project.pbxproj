@@ -14,6 +14,8 @@
 		2F08617D2534BC88009160B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F08617C2534BC88009160B1 /* Assets.xcassets */; };
 		2F0861802534BC88009160B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F08617E2534BC88009160B1 /* LaunchScreen.storyboard */; };
 		2F8CB30E2537C19C002C5258 /* Register1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CB30D2537C19C002C5258 /* Register1ViewController.swift */; };
+		A520D289255F6BEB002537E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A520D288255F6BEB002537E4 /* HomeViewController.swift */; };
+		A520D28F255F6DD1002537E4 /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */; };
 		A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */; };
 		A5667320255C6F8A00CB9529 /* Register3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566731F255C6F8A00CB9529 /* Register3ViewController.swift */; };
 		F9AD91C5B3E45921547BE202 /* Pods_ProyectoLizama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B300C5121B540CC3DFE27CC /* Pods_ProyectoLizama.framework */; };
@@ -31,6 +33,8 @@
 		2F0861812534BC88009160B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8CB30D2537C19C002C5258 /* Register1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register1ViewController.swift; sourceTree = "<group>"; };
 		3B300C5121B540CC3DFE27CC /* Pods_ProyectoLizama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoLizama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A520D288255F6BEB002537E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 		A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A566731F255C6F8A00CB9529 /* Register3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register3ViewController.swift; sourceTree = "<group>"; };
 		F97C3ED95F9B75AFA70D24CA /* Pods-ProyectoLizama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoLizama.release.xcconfig"; path = "Target Support Files/Pods-ProyectoLizama/Pods-ProyectoLizama.release.xcconfig"; sourceTree = "<group>"; };
@@ -87,6 +91,8 @@
 				2F0861812534BC88009160B1 /* Info.plist */,
 				2F8CB30D2537C19C002C5258 /* Register1ViewController.swift */,
 				A566731F255C6F8A00CB9529 /* Register3ViewController.swift */,
+				A520D288255F6BEB002537E4 /* HomeViewController.swift */,
+				A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */,
 			);
 			path = ProyectoLizama;
 			sourceTree = "<group>";
@@ -235,9 +241,11 @@
 			files = (
 				2F0861782534BC85009160B1 /* ViewController.swift in Sources */,
 				A5667320255C6F8A00CB9529 /* Register3ViewController.swift in Sources */,
+				A520D28F255F6DD1002537E4 /* RecoverPassViewController.swift in Sources */,
 				2F8CB30E2537C19C002C5258 /* Register1ViewController.swift in Sources */,
 				2F0861742534BC85009160B1 /* AppDelegate.swift in Sources */,
 				2F0861762534BC85009160B1 /* SceneDelegate.swift in Sources */,
+				A520D289255F6BEB002537E4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
