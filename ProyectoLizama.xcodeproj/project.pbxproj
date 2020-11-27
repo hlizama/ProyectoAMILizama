@@ -14,6 +14,12 @@
 		2F08617D2534BC88009160B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F08617C2534BC88009160B1 /* Assets.xcassets */; };
 		2F0861802534BC88009160B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F08617E2534BC88009160B1 /* LaunchScreen.storyboard */; };
 		2F8CB30E2537C19C002C5258 /* Register1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8CB30D2537C19C002C5258 /* Register1ViewController.swift */; };
+		A517946D25740C5600485F55 /* las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = A517946C25740C5600485F55 /* las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg */; };
+		A517947025740C7400485F55 /* IMG_20180721_162323.png in Resources */ = {isa = PBXBuildFile; fileRef = A517946F25740C7400485F55 /* IMG_20180721_162323.png */; };
+		A51794732574119700485F55 /* CommentaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51794722574119700485F55 /* CommentaryViewController.swift */; };
+		A5179476257411A600485F55 /* CommentaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5179475257411A600485F55 /* CommentaryViewController.xib */; };
+		A51794792574159A00485F55 /* CommentaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A51794782574159A00485F55 /* CommentaryTableViewCell.swift */; };
+		A517947C257415A800485F55 /* CommentaryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A517947B257415A800485F55 /* CommentaryTableViewCell.xib */; };
 		A520D289255F6BEB002537E4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A520D288255F6BEB002537E4 /* HomeViewController.swift */; };
 		A520D28F255F6DD1002537E4 /* RecoverPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */; };
 		A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */; };
@@ -44,6 +50,12 @@
 		2F0861812534BC88009160B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2F8CB30D2537C19C002C5258 /* Register1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register1ViewController.swift; sourceTree = "<group>"; };
 		3B300C5121B540CC3DFE27CC /* Pods_ProyectoLizama.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProyectoLizama.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A517946C25740C5600485F55 /* las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg"; sourceTree = "<group>"; };
+		A517946F25740C7400485F55 /* IMG_20180721_162323.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_20180721_162323.png; sourceTree = "<group>"; };
+		A51794722574119700485F55 /* CommentaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentaryViewController.swift; sourceTree = "<group>"; };
+		A5179475257411A600485F55 /* CommentaryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentaryViewController.xib; sourceTree = "<group>"; };
+		A51794782574159A00485F55 /* CommentaryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentaryTableViewCell.swift; sourceTree = "<group>"; };
+		A517947B257415A800485F55 /* CommentaryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommentaryTableViewCell.xib; sourceTree = "<group>"; };
 		A520D288255F6BEB002537E4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecoverPassViewController.swift; sourceTree = "<group>"; };
 		A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -103,6 +115,12 @@
 		2F0861722534BC85009160B1 /* ProyectoLizama */ = {
 			isa = PBXGroup;
 			children = (
+				A517947B257415A800485F55 /* CommentaryTableViewCell.xib */,
+				A51794782574159A00485F55 /* CommentaryTableViewCell.swift */,
+				A5179475257411A600485F55 /* CommentaryViewController.xib */,
+				A51794722574119700485F55 /* CommentaryViewController.swift */,
+				A517946F25740C7400485F55 /* IMG_20180721_162323.png */,
+				A517946C25740C5600485F55 /* las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg */,
 				A5A6DC95257301630031E553 /* PublicateViewController.swift */,
 				A5A6DC96257301630031E553 /* PublicateViewController.xib */,
 				A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */,
@@ -200,10 +218,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F0861802534BC88009160B1 /* LaunchScreen.storyboard in Resources */,
+				A517946D25740C5600485F55 /* las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg in Resources */,
 				A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */,
 				A5DF1FA02571E3D400ED00F1 /* PublicationTableViewCell.xib in Resources */,
+				A517947025740C7400485F55 /* IMG_20180721_162323.png in Resources */,
 				A5C7307B25633605001ACB28 /* prueba.storyboard in Resources */,
 				A5A6DC98257301630031E553 /* PublicateViewController.xib in Resources */,
+				A5179476257411A600485F55 /* CommentaryViewController.xib in Resources */,
+				A517947C257415A800485F55 /* CommentaryTableViewCell.xib in Resources */,
 				A5A1602A2560635B00CF9E55 /* HomeViewController.xib in Resources */,
 				2F08617D2534BC88009160B1 /* Assets.xcassets in Resources */,
 				2F08617B2534BC85009160B1 /* Main.storyboard in Resources */,
@@ -278,6 +300,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5DF1F9A2571A3E200ED00F1 /* LikeBE.swift in Sources */,
+				A51794792574159A00485F55 /* CommentaryTableViewCell.swift in Sources */,
 				2F0861782534BC85009160B1 /* ViewController.swift in Sources */,
 				A5DF1F9D2571A65000ED00F1 /* PublicationTableViewCell.swift in Sources */,
 				A5667320255C6F8A00CB9529 /* Register3ViewController.swift in Sources */,
@@ -286,6 +309,7 @@
 				2F8CB30E2537C19C002C5258 /* Register1ViewController.swift in Sources */,
 				2F0861742534BC85009160B1 /* AppDelegate.swift in Sources */,
 				A5DF1F972571A39B00ED00F1 /* CommentaryBE.swift in Sources */,
+				A51794732574119700485F55 /* CommentaryViewController.swift in Sources */,
 				2F0861762534BC85009160B1 /* SceneDelegate.swift in Sources */,
 				A520D289255F6BEB002537E4 /* HomeViewController.swift in Sources */,
 				A5CD77F1256238D300CB9A72 /* PopUpViewController.swift in Sources */,

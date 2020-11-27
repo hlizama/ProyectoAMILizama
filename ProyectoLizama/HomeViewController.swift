@@ -16,7 +16,7 @@ enum ProviderType : String{
     case basic
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController{
     
     
     @IBOutlet weak var btnHome: UIButton!
@@ -53,13 +53,11 @@ class HomeViewController: UIViewController {
         //}
     }
     
-    
     @IBAction func btnPublicar(_ sender: Any) {
         self.navigationController?.pushViewController(PublicateViewController(email: "prueba", provider1: .basic), animated: true)
     }
     
     @IBOutlet weak var tbvPub: UITableView!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,62 +82,68 @@ class HomeViewController: UIViewController {
             } else {
                 
                 for document in querySnapshot!.documents {
-                    //print("\(document.documentID) => \(document.data())")
-                    let myDictionary: [String: Any] = document.data()
-                    
-                    for (myKey, myValue) in myDictionary {
-                        if(myKey == "decripcion"){
-                            print(myValue as! String)
-                            
-                        }
+        
+                    if let description = document.data()["decripcion"] as? String
+                                       {
+                        self.addPublication(descripcion: description)
                     }
-                    
-                    
+                }
+                
+                DispatchQueue.main.async {
+                    self.tbvPub.reloadData()
                 }
             }
         }
-        
-        self.arrayPublication.append(PublicationBE(descripcion: "sdfasdfsdf",
-                                                 fecha: "27 de Septiembre",
-                                                 foto:"" ))
-        
-    
-        /* self.arrayPublication.append(PublicationBE(descripcion: "Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes",
-                                                 fecha: "27 de Septiembre",
-                                                 foto:"" ))
-        self.arrayPublication.append(PublicationBE(descripcion: "Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes",
-                                                 fecha: "27 de Septiembre",
-                                                 foto:"" )) */
+
         
     }
     
-    
-
+    func addPublication(descripcion:String){
+        self.arrayPublication.append(PublicationBE(descripcion: descripcion,
+                                                  fecha: "27 de Septiembre",
+                                                  foto:"" ))
+    }
 
     
 }
+
+
+extension HomeViewController: PublicationTableViewCellDelegate {
+    
+    func publicationTableViewCell(_ cell: PublicationTableViewCell, irCommentary publication: PublicationBE) {
+        
+        
+    
+    }
+    
+}
+
+
 
 
 //Sirve para construir el contenido de la tabla
 extension HomeViewController: UITableViewDataSource { //Tiene 3 metodos principales: number, number, cellFor
     
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
+func numberOfSections(in tableView: UITableView) -> Int {
+    return 1
+}
 
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.arrayPublication.count
-    }
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return self.arrayPublication.count
+}
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cellIdentifier = "PublicationTableViewCell" //Debe coincidir con el nombre del storyboard y es KeySensitive
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PublicationTableViewCell
-        cell.objPlace = self.arrayPublication[indexPath.row]
-        
-        return cell
-    }
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    
+    let cellIdentifier = "PublicationTableViewCell" //Debe coincidir con el nombre del storyboard y es KeySensitive
+    
+    let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PublicationTableViewCell
+    cell.objPlace = self.arrayPublication[indexPath.row]
+    
+    return cell
+}
     
 
 }
+
+
+

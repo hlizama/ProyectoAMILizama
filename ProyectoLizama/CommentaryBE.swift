@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+
+class CommentaryBE {
+    
+    var pu_descripcion      : String
+    
+        init(descripcion: String) {
+        self.pu_descripcion      = descripcion
+        
+    }
+    
+}
