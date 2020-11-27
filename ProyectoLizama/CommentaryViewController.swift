@@ -25,7 +25,6 @@ class HomeViewController: UIViewController {
     var handle: AuthStateDidChangeListenerHandle?
     private let email : String
     private let provider : ProviderType
-    var db: Firestore!
     
     var arrayPublication = [PublicationBE]()
     
@@ -46,17 +45,12 @@ class HomeViewController: UIViewController {
         } catch let signOutError as NSError {
           print ("Error signing out: %@", signOutError)
         }
-         /*if(uid == nil) {
-            self.dismiss(animated: true, completion: {}) */
-             //self.navigationController?.popViewController(animated: true)
-             self.navigationController?.popToRootViewController(animated: true)
-        //}
+         if(uid == nil) {
+            self.dismiss(animated: true, completion: {})
+             self.navigationController?.popViewController(animated: true)
+        }
     }
     
-    
-    @IBAction func btnPublicar(_ sender: Any) {
-        self.navigationController?.pushViewController(PublicateViewController(email: "prueba", provider1: .basic), animated: true)
-    }
     
     @IBOutlet weak var tbvPub: UITableView!
     
@@ -64,52 +58,16 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        db = Firestore.firestore()
-        
-        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-         
-            if let user =  user {
-                self.uid = user.uid
-            }
-            
-        }
-        
         let nib = UINib(nibName: "PublicationTableViewCell",bundle: nil )
         
         tbvPub.register(nib, forCellReuseIdentifier :"PublicationTableViewCell")
-        
-        db.collection("publication").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                
-                for document in querySnapshot!.documents {
-                    //print("\(document.documentID) => \(document.data())")
-                    let myDictionary: [String: Any] = document.data()
-                    
-                    for (myKey, myValue) in myDictionary {
-                        if(myKey == "decripcion"){
-                            print(myValue as! String)
-                            
-                        }
-                    }
-                    
-                    
-                }
-            }
-        }
-        
-        self.arrayPublication.append(PublicationBE(descripcion: "sdfasdfsdf",
-                                                 fecha: "27 de Septiembre",
-                                                 foto:"" ))
-        
     
-        /* self.arrayPublication.append(PublicationBE(descripcion: "Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes",
+        self.arrayPublication.append(PublicationBE(descripcion: "Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes",
                                                  fecha: "27 de Septiembre",
                                                  foto:"" ))
         self.arrayPublication.append(PublicationBE(descripcion: "Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes",
                                                  fecha: "27 de Septiembre",
-                                                 foto:"" )) */
+                                                 foto:"" ))
         
     }
     

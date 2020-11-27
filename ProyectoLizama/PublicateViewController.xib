@@ -7,17 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="ProyectoLizama" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PublicateViewController" customModule="ProyectoLizama" customModuleProvider="target">
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="nibName" value="MainViewController"/>
             </userDefinedRuntimeAttributes>
             <connections>
-                <outlet property="tbvPub" destination="vgh-Mt-bgk" id="6Td-dD-xYY"/>
+                <outlet property="txtCommentary" destination="P6o-JF-78C" id="lJ4-zI-9De"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Y3p-92-Us8"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" ambiguous="YES" id="iN0-l3-epB">
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -99,57 +99,54 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" backgroundImage="photo" catalog="system"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-rw-AW1">
-                            <rect key="frame" x="132" y="28.5" width="150" height="40"/>
-                            <color key="backgroundColor" red="0.26274509800000001" green="0.53333333329999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="150" id="Dqd-WO-Bq1"/>
-                                <constraint firstAttribute="height" constant="40" id="rnE-q8-9xY"/>
-                                <constraint firstAttribute="width" secondItem="UgJ-rw-AW1" secondAttribute="height" multiplier="15:4" id="vNq-BX-pSE"/>
-                            </constraints>
-                            <state key="normal" title="Publicar">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="btnPublicar:" destination="-1" eventType="touchUpInside" id="RDz-FD-e2J"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="UgJ-rw-AW1" firstAttribute="centerY" secondItem="0bK-Ep-QMs" secondAttribute="centerY" id="1HZ-z6-4Lu"/>
                         <constraint firstAttribute="trailing" secondItem="iXh-5S-hex" secondAttribute="trailing" constant="12" id="FZb-tt-Zyn"/>
                         <constraint firstItem="iXh-5S-hex" firstAttribute="top" secondItem="0bK-Ep-QMs" secondAttribute="top" constant="12" id="GXg-nC-7zQ"/>
                         <constraint firstAttribute="height" constant="97" id="QwE-t0-9hS"/>
-                        <constraint firstItem="UgJ-rw-AW1" firstAttribute="centerX" secondItem="0bK-Ep-QMs" secondAttribute="centerX" id="VxF-Um-jcd"/>
                         <constraint firstItem="gKM-Df-iks" firstAttribute="top" secondItem="0bK-Ep-QMs" secondAttribute="top" constant="12" id="h6c-vG-P5s"/>
                         <constraint firstItem="gKM-Df-iks" firstAttribute="leading" secondItem="0bK-Ep-QMs" secondAttribute="leading" constant="12" id="ozy-QO-sBt"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgh-Mt-bgk">
-                    <rect key="frame" x="0.0" y="237" width="414" height="651"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="¿Que desea publicar?" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P6o-JF-78C">
+                    <rect key="frame" x="20" y="266" width="374" height="220"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="651" id="CuF-a2-KVr"/>
+                        <constraint firstAttribute="height" constant="220" id="K2o-Ve-WcA"/>
+                        <constraint firstAttribute="width" secondItem="P6o-JF-78C" secondAttribute="height" multiplier="17:10" id="OhU-Zd-QQb"/>
                     </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDO-9D-gLy">
+                    <rect key="frame" x="20" y="541" width="374" height="50"/>
+                    <color key="backgroundColor" red="0.26274509800000001" green="0.53333333329999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="qwV-Qo-8TJ"/>
+                        <constraint firstAttribute="width" secondItem="yDO-9D-gLy" secondAttribute="height" multiplier="187:25" id="xls-nD-BRU"/>
+                    </constraints>
+                    <state key="normal" title="Publicar">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
                     <connections>
-                        <outlet property="dataSource" destination="-1" id="Mn0-FW-rWf"/>
-                        <outlet property="delegate" destination="-1" id="DG2-Jg-oSt"/>
+                        <action selector="btnPublicar:" destination="-1" eventType="touchUpInside" id="a3c-CG-X1i"/>
                     </connections>
-                </tableView>
+                </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="P6o-JF-78C" firstAttribute="top" secondItem="0bK-Ep-QMs" secondAttribute="bottom" constant="29" id="2Ed-6n-lf4"/>
                 <constraint firstItem="0bK-Ep-QMs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="140" id="9by-ea-hzR"/>
-                <constraint firstItem="vgh-Mt-bgk" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9x6-My-wnX"/>
-                <constraint firstAttribute="bottom" secondItem="vgh-Mt-bgk" secondAttribute="bottom" id="UMe-QT-nce"/>
+                <constraint firstAttribute="trailing" secondItem="yDO-9D-gLy" secondAttribute="trailing" constant="20" id="G7G-cd-zji"/>
+                <constraint firstAttribute="trailing" secondItem="P6o-JF-78C" secondAttribute="trailing" constant="20" id="VOn-Wi-Z17"/>
                 <constraint firstItem="h6t-ZM-GPj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="WrQ-1w-zie"/>
+                <constraint firstItem="yDO-9D-gLy" firstAttribute="top" secondItem="P6o-JF-78C" secondAttribute="bottom" constant="55" id="YDh-Kd-35T"/>
                 <constraint firstAttribute="trailing" secondItem="0bK-Ep-QMs" secondAttribute="trailing" id="Zbh-qm-IlN"/>
                 <constraint firstItem="h6t-ZM-GPj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="44" id="bhX-Xp-4xK"/>
                 <constraint firstItem="0bK-Ep-QMs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="egh-PL-vBG"/>
-                <constraint firstAttribute="trailing" secondItem="vgh-Mt-bgk" secondAttribute="trailing" id="iRH-6D-BNN"/>
+                <constraint firstItem="P6o-JF-78C" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="fy2-Sv-IFp"/>
+                <constraint firstItem="yDO-9D-gLy" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="igF-lx-oUw"/>
                 <constraint firstAttribute="trailing" secondItem="h6t-ZM-GPj" secondAttribute="trailing" id="l8j-9F-TXB"/>
-                <constraint firstItem="vgh-Mt-bgk" firstAttribute="top" secondItem="0bK-Ep-QMs" secondAttribute="bottom" id="sYg-pu-tHn"/>
             </constraints>
             <point key="canvasLocation" x="140.57971014492756" y="43.526785714285715"/>
         </view>

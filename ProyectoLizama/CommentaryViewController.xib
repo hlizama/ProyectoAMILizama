@@ -99,29 +99,12 @@
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" backgroundImage="photo" catalog="system"/>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UgJ-rw-AW1">
-                            <rect key="frame" x="132" y="28.5" width="150" height="40"/>
-                            <color key="backgroundColor" red="0.26274509800000001" green="0.53333333329999999" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="150" id="Dqd-WO-Bq1"/>
-                                <constraint firstAttribute="height" constant="40" id="rnE-q8-9xY"/>
-                                <constraint firstAttribute="width" secondItem="UgJ-rw-AW1" secondAttribute="height" multiplier="15:4" id="vNq-BX-pSE"/>
-                            </constraints>
-                            <state key="normal" title="Publicar">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </state>
-                            <connections>
-                                <action selector="btnPublicar:" destination="-1" eventType="touchUpInside" id="RDz-FD-e2J"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstItem="UgJ-rw-AW1" firstAttribute="centerY" secondItem="0bK-Ep-QMs" secondAttribute="centerY" id="1HZ-z6-4Lu"/>
                         <constraint firstAttribute="trailing" secondItem="iXh-5S-hex" secondAttribute="trailing" constant="12" id="FZb-tt-Zyn"/>
                         <constraint firstItem="iXh-5S-hex" firstAttribute="top" secondItem="0bK-Ep-QMs" secondAttribute="top" constant="12" id="GXg-nC-7zQ"/>
                         <constraint firstAttribute="height" constant="97" id="QwE-t0-9hS"/>
-                        <constraint firstItem="UgJ-rw-AW1" firstAttribute="centerX" secondItem="0bK-Ep-QMs" secondAttribute="centerX" id="VxF-Um-jcd"/>
                         <constraint firstItem="gKM-Df-iks" firstAttribute="top" secondItem="0bK-Ep-QMs" secondAttribute="top" constant="12" id="h6c-vG-P5s"/>
                         <constraint firstItem="gKM-Df-iks" firstAttribute="leading" secondItem="0bK-Ep-QMs" secondAttribute="leading" constant="12" id="ozy-QO-sBt"/>
                     </constraints>

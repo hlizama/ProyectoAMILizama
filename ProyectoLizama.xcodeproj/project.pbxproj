@@ -19,6 +19,8 @@
 		A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */; };
 		A5667320255C6F8A00CB9529 /* Register3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A566731F255C6F8A00CB9529 /* Register3ViewController.swift */; };
 		A5A1602A2560635B00CF9E55 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A160292560635B00CF9E55 /* HomeViewController.xib */; };
+		A5A6DC97257301630031E553 /* PublicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6DC95257301630031E553 /* PublicateViewController.swift */; };
+		A5A6DC98257301630031E553 /* PublicateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A6DC96257301630031E553 /* PublicateViewController.xib */; };
 		A5C7307B25633605001ACB28 /* prueba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C7307A25633605001ACB28 /* prueba.storyboard */; };
 		A5CD77EE2562386700CB9A72 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */; };
 		A5CD77F1256238D300CB9A72 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */; };
@@ -47,6 +49,8 @@
 		A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A566731F255C6F8A00CB9529 /* Register3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register3ViewController.swift; sourceTree = "<group>"; };
 		A5A160292560635B00CF9E55 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		A5A6DC95257301630031E553 /* PublicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicateViewController.swift; sourceTree = "<group>"; };
+		A5A6DC96257301630031E553 /* PublicateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicateViewController.xib; sourceTree = "<group>"; };
 		A5C7307A25633605001ACB28 /* prueba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prueba.storyboard; sourceTree = "<group>"; };
 		A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,8 @@
 		2F0861722534BC85009160B1 /* ProyectoLizama */ = {
 			isa = PBXGroup;
 			children = (
+				A5A6DC95257301630031E553 /* PublicateViewController.swift */,
+				A5A6DC96257301630031E553 /* PublicateViewController.xib */,
 				A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */,
 				2F0861732534BC85009160B1 /* AppDelegate.swift */,
 				2F0861752534BC85009160B1 /* SceneDelegate.swift */,
@@ -197,6 +203,7 @@
 				A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */,
 				A5DF1FA02571E3D400ED00F1 /* PublicationTableViewCell.xib in Resources */,
 				A5C7307B25633605001ACB28 /* prueba.storyboard in Resources */,
+				A5A6DC98257301630031E553 /* PublicateViewController.xib in Resources */,
 				A5A1602A2560635B00CF9E55 /* HomeViewController.xib in Resources */,
 				2F08617D2534BC88009160B1 /* Assets.xcassets in Resources */,
 				2F08617B2534BC85009160B1 /* Main.storyboard in Resources */,
@@ -274,6 +281,7 @@
 				2F0861782534BC85009160B1 /* ViewController.swift in Sources */,
 				A5DF1F9D2571A65000ED00F1 /* PublicationTableViewCell.swift in Sources */,
 				A5667320255C6F8A00CB9529 /* Register3ViewController.swift in Sources */,
+				A5A6DC97257301630031E553 /* PublicateViewController.swift in Sources */,
 				A520D28F255F6DD1002537E4 /* RecoverPassViewController.swift in Sources */,
 				2F8CB30E2537C19C002C5258 /* Register1ViewController.swift in Sources */,
 				2F0861742534BC85009160B1 /* AppDelegate.swift in Sources */,
