@@ -62,12 +62,13 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         
         tbvPub.register(nib, forCellReuseIdentifier :"PublicationTableViewCell")
     
-        self.arrayPublication.append(PublicationBE(descripcion: "ISMirafloreasdasds",
-                                                 fecha: "5074",
+        self.arrayPublication.append(PublicationBE(descripcion: "Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes",
+                                                 fecha: "27 de Septiembre",
                                                  foto:"" ))
-        self.arrayPublication.append(PublicationBE(descripcion: "ISMirafloresasd",
-                                                 fecha: "5074",
+        self.arrayPublication.append(PublicationBE(descripcion: "Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes",
+                                                 fecha: "27 de Septiembre",
                                                  foto:"" ))
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
