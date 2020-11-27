@@ -16,9 +16,9 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q5f-9j-Ikv">
-                        <rect key="frame" x="20" y="157" width="373" height="163.5"/>
+                        <rect key="frame" x="20" y="157" width="373" height="180.5"/>
                         <constraints>
-                            <constraint firstAttribute="width" secondItem="q5f-9j-Ikv" secondAttribute="height" multiplier="187:82" id="CfD-M1-hQd"/>
+                            <constraint firstAttribute="width" secondItem="q5f-9j-Ikv" secondAttribute="height" multiplier="374:181" id="Z2U-Mw-Zr6"/>
                         </constraints>
                         <string key="text">Los que me conocen saben que me gusta celebrar mi día .. y hoy más que nunca me siento feliz por tanto cariño, gracias a todos por sus saludos, por sus mensajes, por sus llamadas. </string>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -58,14 +58,15 @@
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="q5f-9j-Ikv" firstAttribute="leading" secondItem="28C-Ed-koK" secondAttribute="leading" constant="20" id="3tv-no-ZBG"/>
                     <constraint firstItem="a3e-Fc-6ZC" firstAttribute="leading" secondItem="28C-Ed-koK" secondAttribute="leading" constant="20" id="DCO-bn-NcU"/>
                     <constraint firstAttribute="trailing" secondItem="SHC-c5-yui" secondAttribute="trailing" constant="20" id="DEd-vC-SIY"/>
-                    <constraint firstItem="q5f-9j-Ikv" firstAttribute="trailing" secondItem="28C-Ed-koK" secondAttribute="trailingMargin" id="MF3-V5-xHO"/>
+                    <constraint firstAttribute="trailing" secondItem="q5f-9j-Ikv" secondAttribute="trailing" constant="20" id="RzO-PH-5ee"/>
                     <constraint firstItem="pIx-wE-6PN" firstAttribute="top" secondItem="SHC-c5-yui" secondAttribute="bottom" constant="22" id="d61-WI-xDD"/>
+                    <constraint firstAttribute="bottom" secondItem="q5f-9j-Ikv" secondAttribute="bottom" constant="39" id="eS5-Ts-iw9"/>
                     <constraint firstAttribute="trailing" secondItem="pIx-wE-6PN" secondAttribute="trailing" constant="20" id="fwf-1k-MzU"/>
-                    <constraint firstItem="q5f-9j-Ikv" firstAttribute="top" secondItem="pIx-wE-6PN" secondAttribute="bottom" constant="20" id="nk2-7Q-iID"/>
                     <constraint firstItem="SHC-c5-yui" firstAttribute="top" secondItem="28C-Ed-koK" secondAttribute="top" constant="20" id="q0Y-D8-7am"/>
-                    <constraint firstItem="q5f-9j-Ikv" firstAttribute="leading" secondItem="28C-Ed-koK" secondAttribute="leadingMargin" id="syE-jg-xON"/>
+                    <constraint firstItem="q5f-9j-Ikv" firstAttribute="top" secondItem="pIx-wE-6PN" secondAttribute="bottom" constant="20" id="tP7-cE-ZMS"/>
                     <constraint firstItem="a3e-Fc-6ZC" firstAttribute="top" secondItem="28C-Ed-koK" secondAttribute="top" constant="20" id="uzU-mL-fYy"/>
                     <constraint firstItem="pIx-wE-6PN" firstAttribute="leading" secondItem="a3e-Fc-6ZC" secondAttribute="trailing" constant="20" id="vZ2-4w-a8D"/>
                     <constraint firstItem="SHC-c5-yui" firstAttribute="leading" secondItem="a3e-Fc-6ZC" secondAttribute="trailing" constant="20" id="z8C-Mi-I3d"/>
@@ -73,7 +74,6 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="lblDescripcion" destination="q5f-9j-Ikv" id="7y2-EA-XbG"/>
-                <outlet property="lblFecha" destination="pIx-wE-6PN" id="rQP-qq-lMa"/>
             </connections>
             <point key="canvasLocation" x="53.623188405797109" y="180.46875"/>
         </tableViewCell>

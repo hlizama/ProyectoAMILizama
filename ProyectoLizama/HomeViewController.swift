@@ -111,9 +111,27 @@ class HomeViewController: UIViewController{
 extension HomeViewController: PublicationTableViewCellDelegate {
     
     func publicationTableViewCell(_ cell: PublicationTableViewCell, irCommentary publication: PublicationBE) {
-        
-        
+        print("hola3")
+        self.navigationController?.pushViewController(CommentaryViewController(email:"", provider2: .basic), animated: true)
     
+    }
+    
+    func publicationLikeTableViewCell(_ cell: PublicationTableViewCell, publicationLike publication: PublicationBE) {
+        
+        // Add a new document with a generated ID
+        var ref: DocumentReference? = nil
+        ref = db.collection("megusta").addDocument(data: [
+            "idUsuario": uid,
+            "idPublicacion":"12323"
+            
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+
     }
     
 }
@@ -137,8 +155,9 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
     let cellIdentifier = "PublicationTableViewCell" //Debe coincidir con el nombre del storyboard y es KeySensitive
     
     let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PublicationTableViewCell
+    cell.delegate = self
     cell.objPlace = self.arrayPublication[indexPath.row]
-    
+   
     return cell
 }
     

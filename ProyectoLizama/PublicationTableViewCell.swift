@@ -10,6 +10,8 @@ import UIKit
 
 protocol PublicationTableViewCellDelegate {
     func publicationTableViewCell(_ cell: PublicationTableViewCell, irCommentary publication: PublicationBE)
+    
+    func publicationLikeTableViewCell(_ cell: PublicationTableViewCell, publicationLike publication: PublicationBE)
 }
 
 
@@ -43,6 +45,13 @@ class PublicationTableViewCell: UITableViewCell {
         //print("asdfasdf")
         self.delegate?.publicationTableViewCell(self, irCommentary: self.objPlace)
     
+    }
+    
+    
+    @IBAction func btnMeGusta(_ sender: Any) {
+        
+        self.delegate?.publicationLikeTableViewCell(self, publicationLike: self.objPlace)
+        
     }
     
     

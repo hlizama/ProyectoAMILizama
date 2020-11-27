@@ -59,7 +59,9 @@ class CommentaryViewController: UIViewController {
         var ref: DocumentReference? = nil
         ref = db.collection("commentary").addDocument(data: [
             "idUsuario": uid,
+            "idPublicacion":"12323",
             "descripcion": txtCommentary.text
+            
         ]) { err in
             if let err = err {
                 print("Error adding document: \(err)")
@@ -89,6 +91,31 @@ class CommentaryViewController: UIViewController {
             
         }
         
+        db.collection("commentary").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                
+                for document in querySnapshot!.documents {
+        
+                    if let description = document.data()["descripcion"] as? String
+                                       {
+                        self.addPublication(descripcion: description)
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    self.tbvPub.reloadData()
+                }
+            }
+        }
+        
+        
+        
+    }
+    
+    func addPublication(descripcion:String){
+        self.arrayCommentary.append(CommentaryBE(descripcion: descripcion))
     }
     
 

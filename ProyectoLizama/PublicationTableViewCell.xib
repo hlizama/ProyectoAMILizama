@@ -69,6 +69,9 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kLc-4S-kew">
                         <rect key="frame" x="20" y="635" width="64" height="30"/>
                         <state key="normal" title="Me gusta"/>
+                        <connections>
+                            <action selector="btnMeGusta:" destination="n8y-pB-3ls" eventType="touchUpInside" id="igc-Aw-D1d"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28 Comentarios" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JhH-3b-cUo">
                         <rect key="frame" x="200" y="597" width="186.5" height="21"/>
