@@ -16,7 +16,7 @@ enum ProviderType : String{
     case basic
 }
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDataSource {
     
     
     @IBOutlet weak var btnHome: UIButton!
@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     private let email : String
     private let provider : ProviderType
     
-    
+    var arrayPublication = [PublicationBE]()
     
     init(email:String, provider:ProviderType) {
         self.email = email
@@ -51,39 +51,43 @@ class HomeViewController: UIViewController {
         }
     }
     
+    
+    @IBOutlet weak var tbvPub: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nib = UINib(nibName: "PublicationTableViewCell",bundle: nil )
+        
+        tbvPub.register(nib, forCellReuseIdentifier :"PublicationTableViewCell")
+    
+        self.arrayPublication.append(PublicationBE(descripcion: "ISMirafloreasdasds",
+                                                 fecha: "5074",
+                                                 foto:"" ))
+        self.arrayPublication.append(PublicationBE(descripcion: "ISMirafloresasd",
+                                                 fecha: "5074",
+                                                 foto:"" ))
     }
     
-    private func valida(){
-       
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
-    
-    
-    
-     /* override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        // [START auth_listener]
-       handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            
-            if(user?.uid == nil){
-                self.navigationController?.popViewController(animated: true)
-            }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.arrayPublication.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        //print(user?.displayName)
-          // [START_EXCLUDE]
-          //self.setTitleDisplay(user)
-          //self.tableView.reloadData()
-          // [END_EXCLUDE]
-        }
+        let cellIdentifier = "PublicationTableViewCell" //Debe coincidir con el nombre del storyboard y es KeySensitive
         
-    } */
-    
-    /* override func viewWillDisappear(_ animated: Bool) {
-       super.viewWillDisappear(animated)
-       // [START remove_auth_listener]
-       Auth.auth().removeStateDidChangeListener(handle!)
-       // [END remove_auth_listener]
-     }  */
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! PublicationTableViewCell
+        cell.objPlace = self.arrayPublication[indexPath.row]
+        
+        return cell
+    }
+
+
     
 }

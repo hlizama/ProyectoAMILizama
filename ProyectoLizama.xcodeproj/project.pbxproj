@@ -22,6 +22,11 @@
 		A5C7307B25633605001ACB28 /* prueba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C7307A25633605001ACB28 /* prueba.storyboard */; };
 		A5CD77EE2562386700CB9A72 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */; };
 		A5CD77F1256238D300CB9A72 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */; };
+		A5DF1F942571A35A00ED00F1 /* PublicationBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF1F932571A35A00ED00F1 /* PublicationBE.swift */; };
+		A5DF1F972571A39B00ED00F1 /* CommentaryBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF1F962571A39B00ED00F1 /* CommentaryBE.swift */; };
+		A5DF1F9A2571A3E200ED00F1 /* LikeBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF1F992571A3E200ED00F1 /* LikeBE.swift */; };
+		A5DF1F9D2571A65000ED00F1 /* PublicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF1F9C2571A65000ED00F1 /* PublicationTableViewCell.swift */; };
+		A5DF1FA02571E3D400ED00F1 /* PublicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5DF1F9F2571E3D400ED00F1 /* PublicationTableViewCell.xib */; };
 		F9AD91C5B3E45921547BE202 /* Pods_ProyectoLizama.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3B300C5121B540CC3DFE27CC /* Pods_ProyectoLizama.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,11 @@
 		A5C7307A25633605001ACB28 /* prueba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prueba.storyboard; sourceTree = "<group>"; };
 		A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		A5DF1F932571A35A00ED00F1 /* PublicationBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationBE.swift; sourceTree = "<group>"; };
+		A5DF1F962571A39B00ED00F1 /* CommentaryBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentaryBE.swift; sourceTree = "<group>"; };
+		A5DF1F992571A3E200ED00F1 /* LikeBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikeBE.swift; sourceTree = "<group>"; };
+		A5DF1F9C2571A65000ED00F1 /* PublicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationTableViewCell.swift; sourceTree = "<group>"; };
+		A5DF1F9F2571E3D400ED00F1 /* PublicationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PublicationTableViewCell.xib; sourceTree = "<group>"; };
 		F97C3ED95F9B75AFA70D24CA /* Pods-ProyectoLizama.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProyectoLizama.release.xcconfig"; path = "Target Support Files/Pods-ProyectoLizama/Pods-ProyectoLizama.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -105,6 +115,11 @@
 				A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */,
 				A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */,
 				A5C7307A25633605001ACB28 /* prueba.storyboard */,
+				A5DF1F932571A35A00ED00F1 /* PublicationBE.swift */,
+				A5DF1F962571A39B00ED00F1 /* CommentaryBE.swift */,
+				A5DF1F992571A3E200ED00F1 /* LikeBE.swift */,
+				A5DF1F9C2571A65000ED00F1 /* PublicationTableViewCell.swift */,
+				A5DF1F9F2571E3D400ED00F1 /* PublicationTableViewCell.xib */,
 			);
 			path = ProyectoLizama;
 			sourceTree = "<group>";
@@ -180,6 +195,7 @@
 			files = (
 				2F0861802534BC88009160B1 /* LaunchScreen.storyboard in Resources */,
 				A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */,
+				A5DF1FA02571E3D400ED00F1 /* PublicationTableViewCell.xib in Resources */,
 				A5C7307B25633605001ACB28 /* prueba.storyboard in Resources */,
 				A5A1602A2560635B00CF9E55 /* HomeViewController.xib in Resources */,
 				2F08617D2534BC88009160B1 /* Assets.xcassets in Resources */,
@@ -254,14 +270,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5DF1F9A2571A3E200ED00F1 /* LikeBE.swift in Sources */,
 				2F0861782534BC85009160B1 /* ViewController.swift in Sources */,
+				A5DF1F9D2571A65000ED00F1 /* PublicationTableViewCell.swift in Sources */,
 				A5667320255C6F8A00CB9529 /* Register3ViewController.swift in Sources */,
 				A520D28F255F6DD1002537E4 /* RecoverPassViewController.swift in Sources */,
 				2F8CB30E2537C19C002C5258 /* Register1ViewController.swift in Sources */,
 				2F0861742534BC85009160B1 /* AppDelegate.swift in Sources */,
+				A5DF1F972571A39B00ED00F1 /* CommentaryBE.swift in Sources */,
 				2F0861762534BC85009160B1 /* SceneDelegate.swift in Sources */,
 				A520D289255F6BEB002537E4 /* HomeViewController.swift in Sources */,
 				A5CD77F1256238D300CB9A72 /* PopUpViewController.swift in Sources */,
+				A5DF1F942571A35A00ED00F1 /* PublicationBE.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
