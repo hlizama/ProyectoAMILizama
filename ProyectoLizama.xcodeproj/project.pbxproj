@@ -27,7 +27,6 @@
 		A5A1602A2560635B00CF9E55 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A160292560635B00CF9E55 /* HomeViewController.xib */; };
 		A5A6DC97257301630031E553 /* PublicateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A6DC95257301630031E553 /* PublicateViewController.swift */; };
 		A5A6DC98257301630031E553 /* PublicateViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5A6DC96257301630031E553 /* PublicateViewController.xib */; };
-		A5C7307B25633605001ACB28 /* prueba.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A5C7307A25633605001ACB28 /* prueba.storyboard */; };
 		A5CD77EE2562386700CB9A72 /* PopUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */; };
 		A5CD77F1256238D300CB9A72 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */; };
 		A5DF1F942571A35A00ED00F1 /* PublicationBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DF1F932571A35A00ED00F1 /* PublicationBE.swift */; };
@@ -63,7 +62,6 @@
 		A5A160292560635B00CF9E55 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		A5A6DC95257301630031E553 /* PublicateViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicateViewController.swift; sourceTree = "<group>"; };
 		A5A6DC96257301630031E553 /* PublicateViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PublicateViewController.xib; sourceTree = "<group>"; };
-		A5C7307A25633605001ACB28 /* prueba.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = prueba.storyboard; sourceTree = "<group>"; };
 		A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUpViewController.xib; sourceTree = "<group>"; };
 		A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		A5DF1F932571A35A00ED00F1 /* PublicationBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicationBE.swift; sourceTree = "<group>"; };
@@ -115,37 +113,196 @@
 		2F0861722534BC85009160B1 /* ProyectoLizama */ = {
 			isa = PBXGroup;
 			children = (
-				A517947B257415A800485F55 /* CommentaryTableViewCell.xib */,
-				A51794782574159A00485F55 /* CommentaryTableViewCell.swift */,
-				A5179475257411A600485F55 /* CommentaryViewController.xib */,
-				A51794722574119700485F55 /* CommentaryViewController.swift */,
-				A517946F25740C7400485F55 /* IMG_20180721_162323.png */,
-				A517946C25740C5600485F55 /* las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg */,
-				A5A6DC95257301630031E553 /* PublicateViewController.swift */,
-				A5A6DC96257301630031E553 /* PublicateViewController.xib */,
+				A502A23625798DC7003D3261 /* General */,
+				A502A23525798D63003D3261 /* iPhone */,
+				A502A2242579868D003D3261 /* BE */,
+				A502A23725798DE2003D3261 /* BL */,
+				A502A23825798DFF003D3261 /* WS */,
 				A566731C255C3ECA00CB9529 /* GoogleService-Info.plist */,
 				2F0861732534BC85009160B1 /* AppDelegate.swift */,
 				2F0861752534BC85009160B1 /* SceneDelegate.swift */,
-				2F0861772534BC85009160B1 /* ViewController.swift */,
-				2F0861792534BC85009160B1 /* Main.storyboard */,
 				2F08617C2534BC88009160B1 /* Assets.xcassets */,
 				2F08617E2534BC88009160B1 /* LaunchScreen.storyboard */,
 				2F0861812534BC88009160B1 /* Info.plist */,
-				2F8CB30D2537C19C002C5258 /* Register1ViewController.swift */,
-				A566731F255C6F8A00CB9529 /* Register3ViewController.swift */,
-				A520D288255F6BEB002537E4 /* HomeViewController.swift */,
-				A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */,
-				A5A160292560635B00CF9E55 /* HomeViewController.xib */,
-				A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */,
-				A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */,
-				A5C7307A25633605001ACB28 /* prueba.storyboard */,
-				A5DF1F932571A35A00ED00F1 /* PublicationBE.swift */,
-				A5DF1F962571A39B00ED00F1 /* CommentaryBE.swift */,
-				A5DF1F992571A3E200ED00F1 /* LikeBE.swift */,
-				A5DF1F9C2571A65000ED00F1 /* PublicationTableViewCell.swift */,
-				A5DF1F9F2571E3D400ED00F1 /* PublicationTableViewCell.xib */,
 			);
 			path = ProyectoLizama;
+			sourceTree = "<group>";
+		};
+		A502A2242579868D003D3261 /* BE */ = {
+			isa = PBXGroup;
+			children = (
+				A5DF1F962571A39B00ED00F1 /* CommentaryBE.swift */,
+				A5DF1F992571A3E200ED00F1 /* LikeBE.swift */,
+				A5DF1F932571A35A00ED00F1 /* PublicationBE.swift */,
+			);
+			path = BE;
+			sourceTree = "<group>";
+		};
+		A502A22625798766003D3261 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A502A2292579882E003D3261 /* img */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A502A2272579879B003D3261 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A502A23325798C00003D3261 /* Home */,
+				A502A23125798B54003D3261 /* Publicate */,
+				A502A22F25798A96003D3261 /* Commentary */,
+				A502A22C25798939003D3261 /* Login */,
+				A502A23925798E80003D3261 /* PopUp */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A502A22825798807003D3261 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A502A23225798BE7003D3261 /* Home */,
+				A502A23025798B1D003D3261 /* Publicate */,
+				A502A22E257989DC003D3261 /* Commentary */,
+				A502A22D25798987003D3261 /* Register */,
+				A502A22B257988CB003D3261 /* Login */,
+				A502A23B25798EEE003D3261 /* PopUp */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		A502A2292579882E003D3261 /* img */ = {
+			isa = PBXGroup;
+			children = (
+				A517946F25740C7400485F55 /* IMG_20180721_162323.png */,
+				A517946C25740C5600485F55 /* las-mejores-fotos-de-paisajes-NUBES-FOTOS-nubes-rayo-istock.jpg */,
+			);
+			path = img;
+			sourceTree = "<group>";
+		};
+		A502A22B257988CB003D3261 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A520D28E255F6DD1002537E4 /* RecoverPassViewController.swift */,
+				2F0861772534BC85009160B1 /* ViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A502A22C25798939003D3261 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				2F0861792534BC85009160B1 /* Main.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A502A22D25798987003D3261 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				2F8CB30D2537C19C002C5258 /* Register1ViewController.swift */,
+				A566731F255C6F8A00CB9529 /* Register3ViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		A502A22E257989DC003D3261 /* Commentary */ = {
+			isa = PBXGroup;
+			children = (
+				A51794722574119700485F55 /* CommentaryViewController.swift */,
+				A51794782574159A00485F55 /* CommentaryTableViewCell.swift */,
+			);
+			path = Commentary;
+			sourceTree = "<group>";
+		};
+		A502A22F25798A96003D3261 /* Commentary */ = {
+			isa = PBXGroup;
+			children = (
+				A5179475257411A600485F55 /* CommentaryViewController.xib */,
+				A517947B257415A800485F55 /* CommentaryTableViewCell.xib */,
+			);
+			path = Commentary;
+			sourceTree = "<group>";
+		};
+		A502A23025798B1D003D3261 /* Publicate */ = {
+			isa = PBXGroup;
+			children = (
+				A5DF1F9C2571A65000ED00F1 /* PublicationTableViewCell.swift */,
+				A5A6DC95257301630031E553 /* PublicateViewController.swift */,
+			);
+			path = Publicate;
+			sourceTree = "<group>";
+		};
+		A502A23125798B54003D3261 /* Publicate */ = {
+			isa = PBXGroup;
+			children = (
+				A5A6DC96257301630031E553 /* PublicateViewController.xib */,
+				A5DF1F9F2571E3D400ED00F1 /* PublicationTableViewCell.xib */,
+			);
+			path = Publicate;
+			sourceTree = "<group>";
+		};
+		A502A23225798BE7003D3261 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A520D288255F6BEB002537E4 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A502A23325798C00003D3261 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				A5A160292560635B00CF9E55 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		A502A23525798D63003D3261 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+				A502A22625798766003D3261 /* Resources */,
+				A502A2272579879B003D3261 /* Views */,
+				A502A22825798807003D3261 /* Classes */,
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		A502A23625798DC7003D3261 /* General */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		A502A23725798DE2003D3261 /* BL */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BL;
+			sourceTree = "<group>";
+		};
+		A502A23825798DFF003D3261 /* WS */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WS;
+			sourceTree = "<group>";
+		};
+		A502A23925798E80003D3261 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				A5CD77ED2562386700CB9A72 /* PopUpViewController.xib */,
+			);
+			path = PopUp;
+			sourceTree = "<group>";
+		};
+		A502A23B25798EEE003D3261 /* PopUp */ = {
+			isa = PBXGroup;
+			children = (
+				A5CD77F0256238D300CB9A72 /* PopUpViewController.swift */,
+			);
+			path = PopUp;
 			sourceTree = "<group>";
 		};
 		AD8B0ECCA7BEBE514E26D498 /* Pods */ = {
@@ -222,7 +379,6 @@
 				A566731D255C3ECA00CB9529 /* GoogleService-Info.plist in Resources */,
 				A5DF1FA02571E3D400ED00F1 /* PublicationTableViewCell.xib in Resources */,
 				A517947025740C7400485F55 /* IMG_20180721_162323.png in Resources */,
-				A5C7307B25633605001ACB28 /* prueba.storyboard in Resources */,
 				A5A6DC98257301630031E553 /* PublicateViewController.xib in Resources */,
 				A5179476257411A600485F55 /* CommentaryViewController.xib in Resources */,
 				A517947C257415A800485F55 /* CommentaryTableViewCell.xib in Resources */,
