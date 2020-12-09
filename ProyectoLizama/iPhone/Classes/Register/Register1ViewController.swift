@@ -17,6 +17,12 @@ class Register1ViewController: UIViewController {
     @IBOutlet weak var lblRegisterM: UILabel!
     
     @IBOutlet weak var btnEnviarCorreo: UIButton!
+    
+    
+    var nombre = ""
+    var apellido = ""
+    var carrera = ""
+    var sede = ""
     	
     
     override func viewDidLoad() {
@@ -50,6 +56,10 @@ class Register1ViewController: UIViewController {
         if (segue.identifier == "SegueMailSend") {
             let segundaVista = segue.destination as! Register3ViewController
             segundaVista.correo = txtCorreoRegister.text!
+            segundaVista.nombre = nombre
+            segundaVista.apellido = apellido
+            segundaVista.carrera = carrera
+            segundaVista.sede = sede
         }
     }
     
