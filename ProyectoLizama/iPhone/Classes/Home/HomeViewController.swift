@@ -59,6 +59,14 @@ class HomeViewController: UIViewController{
     
     @IBOutlet weak var tbvPub: UITableView!
     
+    
+    @IBAction func btnProfile(_ sender: Any) {
+        
+        self.navigationController?.pushViewController(ProfileViewController(email: uid!,provider2: .basic), animated: true)
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -85,7 +93,11 @@ class HomeViewController: UIViewController{
         
                     if let description = document.data()["decripcion"] as? String
                                        {
-                        self.addPublication(descripcion: description)
+                        
+                        let idPublicacion = document.documentID as? String
+                        let idUsuario = document.data()["idUsuario"] as? String
+                        
+                        self.addPublication(descripcion: description, idPublicacion: idPublicacion ?? "", idUsuario:idUsuario ?? "")
                     }
                 }
                 
@@ -98,10 +110,12 @@ class HomeViewController: UIViewController{
         
     }
     
-    func addPublication(descripcion:String){
+    func addPublication(descripcion:String, idPublicacion:String, idUsuario:String){
         self.arrayPublication.append(PublicationBE(descripcion: descripcion,
                                                   fecha: "27 de Septiembre",
-                                                  foto:"" ))
+                                                  foto:"",
+                                                  idPublicacion: idPublicacion,
+                                                  idUsuario: idUsuario))
     }
 
     
@@ -112,7 +126,7 @@ extension HomeViewController: PublicationTableViewCellDelegate {
     
     func publicationTableViewCell(_ cell: PublicationTableViewCell, irCommentary publication: PublicationBE) {
         print("hola3")
-        self.navigationController?.pushViewController(CommentaryViewController(email:"", provider2: .basic), animated: true)
+        self.navigationController?.pushViewController(CommentaryViewController(email:publication.pu_idPublicacion, provider2: .basic), animated: true)
     
     }
     

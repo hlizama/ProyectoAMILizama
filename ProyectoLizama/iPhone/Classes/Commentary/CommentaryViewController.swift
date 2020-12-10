@@ -55,11 +55,13 @@ class CommentaryViewController: UIViewController {
     
     @IBAction func btnEnviarComentario(_ sender: Any) {
         
+        
+        //print(email)
         // Add a new document with a generated ID
         var ref: DocumentReference? = nil
         ref = db.collection("commentary").addDocument(data: [
             "idUsuario": uid,
-            "idPublicacion":"12323",
+            "idPublicacion":email,
             "descripcion": txtCommentary.text
             
         ]) { err in
@@ -91,6 +93,8 @@ class CommentaryViewController: UIViewController {
             
         }
         
+        
+        
         db.collection("commentary").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -109,6 +113,7 @@ class CommentaryViewController: UIViewController {
                 }
             }
         }
+        
         
         
         
