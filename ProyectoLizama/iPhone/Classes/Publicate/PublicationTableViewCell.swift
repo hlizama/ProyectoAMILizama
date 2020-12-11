@@ -44,7 +44,7 @@ class PublicationTableViewCell: UITableViewCell {
     private func updateData() {
         self.lblDescripcion.text       = self.objPlace.pu_descripcion
         self.lblFecha.text    = self.objPlace.pu_fecha
-        self.lblNombre.text = self.objPlace.pu_idUsuario
+        //self.lblNombre.text = self.objPlace.pu_idUsuario
         
     }
     
