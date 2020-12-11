@@ -29,6 +29,8 @@ class HomeViewController: UIViewController{
     
     var arrayPublication = [PublicationBE]()
     
+    var arrayProfile = [ProfileBE]()
+    
     init(email:String, provider:ProviderType) {
         self.email = email
         self.provider = provider
@@ -84,6 +86,31 @@ class HomeViewController: UIViewController{
         
         tbvPub.register(nib, forCellReuseIdentifier :"PublicationTableViewCell")
         
+        
+        db.collection("user").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                
+                for document in querySnapshot!.documents {
+        
+                    if let nombre = document.data()["nombre"] as? String
+                    {
+                        let apellido = document.data()["apellido"] as? String
+                        let carrera = document.data()["carrera"] as? String
+                        let sede = document.data()["sede"] as? String
+                        let idUsuario = document.data()["idUsuario"] as? String
+                        
+                        self.addProfile(nombre: nombre, apellido: apellido ?? "", carrera:carrera ?? "", sede:sede ?? "", idUsuario:idUsuario ?? "")
+                    }
+                }
+                
+                DispatchQueue.main.async {
+                    self.tbvPub.reloadData()
+                }
+            }
+        }
+        
         db.collection("publication").getDocuments() { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
@@ -106,6 +133,12 @@ class HomeViewController: UIViewController{
                 }
             }
         }
+        
+        
+        
+
+        
+        
 
         
     }
@@ -117,6 +150,10 @@ class HomeViewController: UIViewController{
                                                   idPublicacion: idPublicacion,
                                                   idUsuario: idUsuario))
     }
+    
+    func addProfile(nombre:String, apellido:String, carrera:String, sede:String, idUsuario:String){
+        self.arrayProfile.append(ProfileBE(nombre: nombre, apellido:apellido, carrera:carrera, sede:sede, idUsuario: idUsuario))
+    }
 
     
 }
@@ -125,7 +162,6 @@ class HomeViewController: UIViewController{
 extension HomeViewController: PublicationTableViewCellDelegate {
     
     func publicationTableViewCell(_ cell: PublicationTableViewCell, irCommentary publication: PublicationBE) {
-        print("hola3")
         self.navigationController?.pushViewController(CommentaryViewController(email:publication.pu_idPublicacion, provider2: .basic), animated: true)
     
     }
@@ -136,7 +172,7 @@ extension HomeViewController: PublicationTableViewCellDelegate {
         var ref: DocumentReference? = nil
         ref = db.collection("megusta").addDocument(data: [
             "idUsuario": uid,
-            "idPublicacion":"12323"
+            "idPublicacion": publication.pu_idPublicacion
             
         ]) { err in
             if let err = err {
@@ -147,6 +183,30 @@ extension HomeViewController: PublicationTableViewCellDelegate {
         }
 
     }
+    
+    func publicationProfileTableViewCell(_ cell: PublicationTableViewCell, publicationProfile publication: PublicationBE) {
+        self.navigationController?.pushViewController(ProfileViewController(email:publication.pu_idUsuario, provider2: .basic), animated: true)
+        
+    }
+    
+    func publicationFollowTableViewCell(_ cell: PublicationTableViewCell, publicationFollow publication: PublicationBE) {
+        
+        // Add a new document with a generated ID
+        var ref: DocumentReference? = nil
+        ref = db.collection("seguidos").addDocument(data: [
+            "idUsuario": uid,
+            "idSeguidor" : publication.pu_idUsuario
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            } else {
+                print("Document added with ID: \(ref!.documentID)")
+            }
+        }
+        
+    
+    }
+    
     
 }
 

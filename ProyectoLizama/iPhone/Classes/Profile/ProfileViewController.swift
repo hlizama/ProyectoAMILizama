@@ -140,11 +140,30 @@ class ProfileViewController: UIViewController {
     }
     
     
-    func addProfile(nombre:String, apellido:String, carrera:String, sede:String){
+    /* func addProfile(nombre:String, apellido:String, carrera:String, sede:String){
         self.arrayProfile.append(ProfileBE(nombre: nombre, apellido:apellido, carrera:carrera, sede:sede))
-    }
+    } */
     
 
+    
+}
+
+extension ProfileViewController: ProfileTableViewCellDelegate {
+    
+    func profileTableViewCell(_ cell: ProfileTableViewCell, delete publication: PublicationBE) {
+         
+        //print(publication.pu_idPublicacion)
+        
+        db.collection("publication").document(publication.pu_idPublicacion).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+            }
+        }
+        
+        
+    }
     
 }
 
@@ -165,6 +184,7 @@ extension ProfileViewController: UITableViewDataSource { //Tiene 3 metodos princ
         let cellIdentifier = "ProfileTableViewCell" //Debe coincidir con el nombre del storyboard y es KeySensitive
         
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ProfileTableViewCell
+        cell.delegate = self
         cell.objPlace = self.arrayPublication[indexPath.row]
         
         return cell
@@ -172,3 +192,6 @@ extension ProfileViewController: UITableViewDataSource { //Tiene 3 metodos princ
     
 
 }
+
+
+

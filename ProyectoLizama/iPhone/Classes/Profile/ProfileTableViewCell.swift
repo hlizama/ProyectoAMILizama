@@ -7,9 +7,18 @@
 
 import UIKit
 
+
+protocol ProfileTableViewCellDelegate {
+    func profileTableViewCell(_ cell: ProfileTableViewCell, delete publication: PublicationBE)
+}
+
+
 class ProfileTableViewCell: UITableViewCell {
     
     @IBOutlet weak private var lblDescripcion      : UILabel!
+    
+    
+    var delegate: ProfileTableViewCellDelegate?
     
 
     public var objPlace: PublicationBE! {
@@ -21,6 +30,15 @@ class ProfileTableViewCell: UITableViewCell {
     private func updateData() {
         self.lblDescripcion.text  = self.objPlace.pu_descripcion
     }
+    
+    @IBAction func btnEliminar(_ sender: Any) {
+        self.delegate?.profileTableViewCell(self,delete: self.objPlace)
+    }
+    
+    
 
 }
+
+
+
 

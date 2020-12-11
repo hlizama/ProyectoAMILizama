@@ -13,12 +13,14 @@ class ProfileBE {
     var apellido  : String
     var carrera   : String
     var sede : String
+    var idUsuario : String
     
-    init(nombre: String, apellido: String, carrera: String, sede: String) {
+    init(nombre: String, apellido: String, carrera: String, sede: String, idUsuario: String) {
         self.nombre      = nombre
         self.apellido    = apellido
         self.carrera     = carrera
         self.sede       = sede
+        self.idUsuario = idUsuario
     }
     
 }
